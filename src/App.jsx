@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 const BOOKINGS_KEY = 'usanzasvar:bookings';
 const TECHS_KEY = 'usanzasvar:techs';
 const SETTINGS_KEY = 'usanzasvar:settings';
-const <p className="uz-summary-note">Зөвхөн эрх бүхий хүн нэвтрэх боломжтой</p>
+const ADMIN_PASSWORD = 'My96101613@@@';
 
 async function loadList(key) {
   try { const r = await window.storage.get(key, true); return r && r.value ? JSON.parse(r.value) : []; }
@@ -833,7 +833,7 @@ function TechRegister({ settings, services, onCancel, onSubmit }) {
         </div>
         {err && <div className="uz-error">{err}</div>}
         <button className="uz-confirm-btn" onClick={submit}>Бүртгэл дуусгах · {fmt(REGISTRATION_FEE)}₮ төлөх</button>
-        <p className="uz-summary-note">DEMO: бодит төлбөр хийгдэхгүй.</p>
+        <p className="uz-summary-note">: 
       </div>
     </div>
   );
@@ -966,7 +966,7 @@ function AdminLogin({ onAuth }) {
           <PasswordField value={pw} onChange={e => { setPw(e.target.value); setErr(''); }} placeholder="••••••••" onKeyDown={e => e.key === 'Enter' && submit()} autoFocus /></div>
         {err && <div className="uz-error">{err}</div>}
         <button className="uz-confirm-btn" onClick={submit}>Нэвтрэх</button>
-        <p className="uz-summary-note">DEMO нууц үг: <b>{ADMIN_PASSWORD}</b> — жинхэнэ сайт дээр өөрчилнө.</p>
+        <p className="uz-summary-note"><p className="uz-summary-note">Зөвхөн эрх бүхий хүн нэвтрэх боломжтой</p>
       </div>
     </div>
   );
