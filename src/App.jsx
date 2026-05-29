@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 const BOOKINGS_KEY = 'usanzasvar:bookings';
 const TECHS_KEY = 'usanzasvar:techs';
 const SETTINGS_KEY = 'usanzasvar:settings';
-const ADMIN_PASSWORD = 'My96101613@@@'; // 
+const <p className="uz-summary-note">Зөвхөн эрх бүхий хүн нэвтрэх боломжтой</p>
 
 async function loadList(key) {
   try { const r = await window.storage.get(key, true); return r && r.value ? JSON.parse(r.value) : []; }
