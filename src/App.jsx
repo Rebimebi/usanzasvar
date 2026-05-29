@@ -833,7 +833,7 @@ function TechRegister({ settings, services, onCancel, onSubmit }) {
         </div>
         {err && <div className="uz-error">{err}</div>}
         <button className="uz-confirm-btn" onClick={submit}>Бүртгэл дуусгах · {fmt(REGISTRATION_FEE)}₮ төлөх</button>
-        <p className="uz-summary-note">: 
+        <p className="uz-summary-note">Бодит төлбөр хийгдсэний дараа бүртгэл идэвхжинэ.</p>
       </div>
     </div>
   );
@@ -966,7 +966,7 @@ function AdminLogin({ onAuth }) {
           <PasswordField value={pw} onChange={e => { setPw(e.target.value); setErr(''); }} placeholder="••••••••" onKeyDown={e => e.key === 'Enter' && submit()} autoFocus /></div>
         {err && <div className="uz-error">{err}</div>}
         <button className="uz-confirm-btn" onClick={submit}>Нэвтрэх</button>
-        <p className="uz-summary-note"><p className="uz-summary-note">Зөвхөн эрх бүхий хүн нэвтрэх боломжтой</p>
+        <p className="uz-summary-note">Зөвхөн эрх бүхий хүн нэвтрэх боломжтой</p>
       </div>
     </div>
   );
